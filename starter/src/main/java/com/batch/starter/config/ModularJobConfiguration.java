@@ -21,8 +21,12 @@ public class ModularJobConfiguration {
 	}
 
 	@Bean
+	public ApplicationContextFactory sequentialStepsJob() {
+		return new GenericApplicationContextFactory(SequentialStepsConfig.class);
+	}
+
+	@Bean
 	public ApplicationContextFactory parallelStepsJob() {
 		return new GenericApplicationContextFactory(ParallelStepsConfig.class);
 	}
-
 }

@@ -25,10 +25,12 @@ public class StarterApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		//		jobLauncher.run(jobRegistry.getJob("createUserDetailsSTCJob"), new JobParametersBuilder()
 		//				.addString("JobID", String.valueOf(System.currentTimeMillis())).toJobParameters());
-		jobLauncher.run(jobRegistry.getJob("createUserDetailsMTCJob"), new JobParametersBuilder()
-				.addString("JobID", String.valueOf(System.currentTimeMillis())).toJobParameters());
+		//		jobLauncher.run(jobRegistry.getJob("createUserDetailsMTCJob"), new JobParametersBuilder()
+		//				.addString("JobID", String.valueOf(System.currentTimeMillis())).toJobParameters());
 		//		jobLauncher.run(jobRegistry.getJob("createUserDetailsPSJob"), new JobParametersBuilder()
 		//				.addString("JobID", String.valueOf(System.currentTimeMillis())).toJobParameters());
+		jobLauncher.run(jobRegistry.getJob("createUserDetailsSSJob"), new JobParametersBuilder()
+				.addString("JobID", String.valueOf(System.currentTimeMillis())).toJobParameters());
 	}
 
 }
