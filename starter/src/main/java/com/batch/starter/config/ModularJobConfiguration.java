@@ -11,13 +11,18 @@ import org.springframework.context.annotation.Configuration;
 public class ModularJobConfiguration {
 
 	@Bean
-	public ApplicationContextFactory parallelStepsJob() {
-		return new GenericApplicationContextFactory(ParallelStepsConfig.class);
+	public ApplicationContextFactory singleThreadChunkJob() {
+		return new GenericApplicationContextFactory(SingleThreadChunkConfig.class);
 	}
 
 	@Bean
-	public ApplicationContextFactory singleThreadChunkJob() {
-		return new GenericApplicationContextFactory(SingleThreadChunkConfig.class);
+	public ApplicationContextFactory multiThreadChunkJob() {
+		return new GenericApplicationContextFactory(MultiThreadChunkConfig.class);
+	}
+
+	@Bean
+	public ApplicationContextFactory parallelStepsJob() {
+		return new GenericApplicationContextFactory(ParallelStepsConfig.class);
 	}
 
 }
