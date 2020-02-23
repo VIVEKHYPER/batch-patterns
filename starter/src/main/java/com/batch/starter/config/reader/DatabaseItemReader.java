@@ -25,11 +25,11 @@ public class DatabaseItemReader implements ItemReader<UserDetailsDTO> {
 		databaseReader.setRowMapper(new BeanPropertyRowMapper<>(UserDetailsDTO.class));
 	}
 
-    @BeforeStep
-    public void initialize() {
-        databaseReader.open(new ExecutionContext());
-    }
-    
+	@BeforeStep
+	public void initialize() {
+		databaseReader.open(new ExecutionContext());
+	}
+
 	@Override
 	public synchronized UserDetailsDTO read()
 			throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {

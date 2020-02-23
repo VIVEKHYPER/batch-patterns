@@ -6,22 +6,22 @@ public class UserDetailsDTO implements Serializable{
 
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 
 	private Integer userID;
-	
+
 	private String userName;
-	
+
 	private String firstName;
-	
+
 	private String lastName;
-	
+
 	private String gender;
-	
+
 	private String password;
-	
+
 	private String status;
 
 	public Integer getUserID() {

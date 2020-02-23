@@ -7,14 +7,14 @@ import org.springframework.batch.item.file.FlatFileHeaderCallback;
 
 public class StringHeaderWriter implements FlatFileHeaderCallback {
 
-    private final String header;
+	private final String header;
 
-    public StringHeaderWriter(String header) {
-        this.header = header;
-    }
+	public StringHeaderWriter(String header) {
+		this.header = header;
+	}
 
-    @Override
-    public void writeHeader(Writer writer) throws IOException {
-        writer.write(header);
-    }
+	@Override
+	public void writeHeader(Writer writer) throws IOException {
+		writer.write(header);
+	}
 }
